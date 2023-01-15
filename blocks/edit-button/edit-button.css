@@ -1,0 +1,23 @@
+.edit-button {
+  margin: 0;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  align-self: center;
+  background: transparent;
+  border: 1px solid #fff;
+  background-image: url(../../images/pencil.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.edit-button:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 580px) {
+  .edit-button {
+    width: 18px;
+    height: 18px;
+  }
+}

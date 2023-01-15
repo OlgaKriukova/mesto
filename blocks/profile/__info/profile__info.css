@@ -1,0 +1,11 @@
+.profile__info {
+  display: grid;
+  grid-template-columns: repeat(294px 24px);
+  grid-template-rows: 48px 22px;
+  gap: 16px 18px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

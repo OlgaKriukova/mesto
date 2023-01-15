@@ -1,0 +1,24 @@
+.edd-button {
+  margin-left: auto;
+  margin-top: 35px;
+  padding: 0;
+  width: 150px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  background-image: url(../../images/plus.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.edd-button:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 580px) {
+  .edd-button {
+    margin-left: 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,22 @@
+.popup__user-occupation {
+  margin: 0;
+  padding: 0;
+  margin-top: 30px;
+  margin-left: 36px;
+  padding-bottom: 13px;
+  max-width: 338px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 500px) {
+  .popup__user-occupation {
+    margin: 0 22px;
+    margin-top: 30px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}

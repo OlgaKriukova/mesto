@@ -20,5 +20,6 @@
   .edd-button {
     margin-left: 0;
     width: 100%;
+    background-image: url(../../images/plus-small.png);
   }
 }

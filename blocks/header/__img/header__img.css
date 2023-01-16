@@ -1,3 +1,14 @@
 .header__img {
-  margin-bottom: 41px;
+  margin-bottom: 38px;
+  width: 142px;
+  height: 33px;
+}
+
+@media (max-width: 740px) {
+  .header__img {
+    width: 104px;
+    height: 24.5px;
+    margin-bottom: 28px;
+    margin-left: 27px;
+  }
 }

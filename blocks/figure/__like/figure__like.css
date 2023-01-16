@@ -1,11 +1,17 @@
 .figure__like {
   margin-left: auto;
   margin-right: 30px;
+  background-image: url(../../../images/like.svg);
+  width: 22px;
+  height: 19px;
 }
 
 .figure__like:hover {
   opacity: 0.5;
 }
 
-.figure__like:active {
+@media (max-width: 621px) {
+  .figure__like {
+    margin-right: 15px;
+  }
 }

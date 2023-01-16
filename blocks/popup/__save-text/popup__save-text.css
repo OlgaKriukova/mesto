@@ -4,7 +4,7 @@
   font-size: 18px;
   line-height: 22px;
 }
-@media (max-width: 500px) {
+@media (max-width: 621px) {
   .popup__save-text {
     font-size: 14px;
     line-height: 17px;

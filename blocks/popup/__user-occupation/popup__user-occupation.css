@@ -12,11 +12,9 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 621px) {
   .popup__user-occupation {
     margin: 0 22px;
     margin-top: 30px;
-    font-size: 14px;
-    line-height: 17px;
   }
 }

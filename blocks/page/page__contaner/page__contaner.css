@@ -7,7 +7,6 @@
 
 @media (max-width: 900px) {
   .page__contaner {
-    margin-left: 19px;
-    margin-right: 19px;
+    margin: 0;
   }
 }

@@ -12,9 +12,10 @@
   max-width: 350px;
 }
 
-@media (max-width: 740px) {
+@media (max-width: 580px) {
   .profile__subtitle {
-    font-size: 17px;
+    font-size: 14px;
+    line-height: 17px;
     text-align: center;
   }
 }

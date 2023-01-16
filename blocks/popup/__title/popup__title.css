@@ -9,7 +9,7 @@
   color: rgba(0, 0, 0, 1);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 621px) {
   .popup__title {
     margin: 0 auto;
     margin-top: 25px;

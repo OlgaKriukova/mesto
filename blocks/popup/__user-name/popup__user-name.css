@@ -1,10 +1,11 @@
 .popup__user-name {
   margin: 0;
   padding: 0;
-  margin-top: 54px;
+  margin-top: 48px;
   margin-left: 36px;
+  margin-right: 36px;
   padding-bottom: 13px;
-  max-width: 338px;
+  max-width: 358px;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;

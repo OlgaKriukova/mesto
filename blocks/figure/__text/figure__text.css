@@ -1,5 +1,5 @@
 .figure__text {
-  width: 200px;
+  max-width: 200px;
   margin-left: 21px;
   text-overflow: ellipsis;
   white-space: nowrap;

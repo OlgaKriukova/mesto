@@ -8,80 +8,80 @@
     <title>MESTO</title>
 </head>
 <body class="page">
-    <div class="page__contaner">
+    <div class="page__container">
         <header class="header">
-            <div class="header__logo">
-                <img src="./images/logo.svg" alt="место-Россия" class="header__img">
-            </div>
+            <img src="./images/logo.svg" alt="место-Россия" class="header__img">
         </header> 
         <main class="main">
-            <div class="profile">
+            <section class="profile">
                 <img src="./images/avatar.jpg" alt="аватарка" class="profile__avatar">
                 <div class="profile__info">
                     <h1 class="profile__title">Жак-Ив Кусто</h1>
-                        <button class="edit-button"></button>
+                        <button type="button" class="profile__edit-button"></button>
                     <p class="profile__subtitle">Исследователь океана</p>
                 </div>
-                <button class="edd-button"></button>
-            </div>
-            <div class="elements">
+                <button type="button" class="edd-button"></button>
+            </section>
+            <section class="elements">
                 <figure class="figure">
                     <img src="./images/elements/ural.jpg" alt="Урал" class="figure__img">
-                    <figcaption class="figure__caption">
-                        <p class="figure__text">Урал</p>
-                        <div class="figure__like"></div>
-                    </figcaption>
+                    <div class="figure__caption">
+                        <figcaption class="figure__text">Урал</figcaption>
+                        <button type="button" class="figure__like"></button>
+                    </div>
                 </figure>
                 <figure class="figure">
                     <img src="./images/elements/baikal.jpg" alt="Байкал" class="figure__img">
-                    <figcaption class="figure__caption">
-                        <p class="figure__text">Байкал</p>
-                        <div class="figure__like"></div>
-                    </figcaption>
+                    <div class="figure__caption">
+                        <figcaption class="figure__text">Байкал</figcaption>
+                        <button type="button" class="figure__like"></button>
+                    </div>
                 </figure>
                 <figure class="figure">
                     <img src="./images/elements/kamchatka.jpg" alt="Камчатка" class="figure__img">
-                    <figcaption class="figure__caption">
-                        <p class="figure__text">Камчатка</p>
-                        <div class="figure__like"></div>
-                    </figcaption>
+                    <div class="figure__caption">
+                        <figcaption class="figure__text">Камчатка</figcaption>
+                        <button type="button" class="figure__like"></button>
+                    </div>
                 </figure>
                 <figure class="figure">
                     <img src="./images/elements/gizgit.jpg" alt="Гижгит" class="figure__img">
-                    <figcaption class="figure__caption">
-                        <p class="figure__text">Гижгит</p>
-                        <div class="figure__like"></div>
-                    </figcaption>
+                    <div class="figure__caption">
+                        <figcaption class="figure__text">Гижгит</figcaption>
+                        <button type="button" class="figure__like"></button>
+                    </div>
                 </figure>
                 <figure class="figure">
                     <img src="./images/elements/kavkaz.jpg" alt="Кавказ" class="figure__img">
-                    <figcaption class="figure__caption">
-                        <p class="figure__text">Кавказ</p>
-                        <div class="figure__like"></div>
-                    </figcaption>
+                    <div class="figure__caption">
+                        <figcaption class="figure__text">Кавказ</figcaption>
+                        <button type="button" class="figure__like"></button>
+                    </div>
                 </figure>
                 <figure class="figure">
                     <img src="./images/elements/sevastopol.jpg" alt="Севастополь" class="figure__img">
-                    <figcaption class="figure__caption">
-                        <p class="figure__text">Севастополь</p>
-                        <div class="figure__like"></div>
-                    </figcaption>
+                    <div class="figure__caption">
+                        <figcaption class="figure__text">Севастополь</figcaption>
+                        <button type="button" class="figure__like"></button>
+                    </div>
                 </figure>
-            </div>
+            </section>
         </main>
         <footer class="footer">
-            <p class="footer__copiright">© 2020 Mesto Russia</p>
+            <p class="footer__copyright">© 2020 Mesto Russia</p>
         </footer>
     </div>
     <div class="popup">
-        <form action="#" method="get" name="edit-form" class="popup__container">
+        <div class="popup__container">
             <button class="popup__close" type = "button"></button>
             <h2 class="popup__title">Редактировать профиль</h2> 
-            <input type="text" name="name" placeholder="Ваше имя" value="" required class="popup__user-name">
-            <input type="text" name="О себе" placeholder="О себе" value="" required class="popup__user-occupation">
-            <button class="popup__save">Сохранить</button>
-        </form>
+            <form action="#" name="edit-form" class="popup__form">
+                <input type="text" name="name" placeholder="Ваше имя" value="" required class="popup__user-name">
+                <input type="text" name="name" placeholder="О себе" value="" required class="popup__user-occupation">
+                <button class="popup__save">Сохранить</button>
+            </form>   
+        </div>
     </div>
-    <script src="./script/script.js"></script>
+    <script src="./script/index.js"></script>
 </body>
 </html>

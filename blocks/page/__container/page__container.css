@@ -1,4 +1,4 @@
-.page__contaner {
+.page__container {
   max-width: 1280px;
   margin: 0 auto;
   background-color: #000;
@@ -6,7 +6,7 @@
 }
 
 @media (max-width: 900px) {
-  .page__contaner {
+  .page__container {
     margin: 0;
   }
 }

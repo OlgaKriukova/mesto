@@ -1,9 +1,9 @@
 .profile__info {
   margin-top: 20px;
   display: grid;
-  grid-template-columns: repeat(294px 24px);
+  grid-template-columns: 300px 24px;
   grid-template-rows: 48px 22px;
-  gap: 16px 18px;
+  gap: 6px 18px;
   flex-direction: column;
   flex-wrap: wrap;
   text-overflow: ellipsis;
@@ -15,6 +15,7 @@
   .profile__info {
     margin-top: 26px;
     margin-left: 25px;
+    grid-template-columns: initial;
     grid-template-rows: 33px 17px;
     gap: 10px 14px;
   }

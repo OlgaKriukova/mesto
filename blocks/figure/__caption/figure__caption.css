@@ -1,4 +1,5 @@
 .figure__caption {
+  margin-top: 20px;
   display: flex;
   align-items: center;
 }

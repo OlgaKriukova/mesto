@@ -1,11 +1,11 @@
-.popup__save-text {
-  margin: 0 auto;
-  font-weight: 400;
+.footer__copyright {
   font-size: 18px;
   line-height: 22px;
+  color: rgba(84, 84, 84, 1);
 }
+
 @media (max-width: 621px) {
-  .popup__save-text {
+  .footer__copyright {
     font-size: 14px;
     line-height: 17px;
   }

@@ -4,6 +4,9 @@
   background-image: url(../../../images/like.svg);
   width: 22px;
   height: 19px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .figure__like:hover {

@@ -4,6 +4,12 @@
   height: 33px;
 }
 
+@media (max-width: 920px) {
+  .header__img {
+    margin-left: 19px;
+  }
+}
+
 @media (max-width: 740px) {
   .header__img {
     width: 104px;

@@ -10,7 +10,7 @@
   }
 }
 
-@media (max-width: 740px) {
+@media (max-width: 580px) {
   .header__img {
     width: 104px;
     height: 24.5px;

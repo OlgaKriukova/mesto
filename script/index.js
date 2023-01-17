@@ -29,6 +29,5 @@ popupClose.addEventListener('click', function () {
     closePopup ();
 });
 
-popupContainer.addEventListener('submit', handleFormSubmit); //  По совету наставника пишу этот коментарий и ничего не исправляю, т.к. в описании ПР есть указание обрабатывать submit
-//В чек-листе есть пункт "При открытом попапе нажатие на клавишу “Enter” или кнопку «Сохранить» изменяет на странице информацию о пользователе"
+popupContainer.addEventListener('submit', handleFormSubmit); 
 

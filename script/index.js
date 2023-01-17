@@ -7,7 +7,6 @@ let popupUserOccupation = document.querySelector('.popup__user-occupation');
 let profileTitle = document.querySelector('.profile__title');
 let profileSubtitle = document.querySelector('.profile__subtitle');
 
-
 function closePopup () {
     popup.classList.remove('popup_opened');
 }
@@ -29,5 +28,4 @@ popupClose.addEventListener('click', function () {
     closePopup ();
 });
 
-popupContainer.addEventListener('submit', handleFormSubmit); 
-
+popupContainer.addEventListener('submit', handleFormSubmit);

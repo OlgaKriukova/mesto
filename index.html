@@ -20,66 +20,57 @@
                         <button type="button" class="profile__edit-button"></button>
                     <p class="profile__subtitle">Исследователь океана</p>
                 </div>
-                <button type="button" class="edd-button"></button>
+                <button type="button" class="add-button"></button>
             </section>
             <section class="elements" aria-label="фото">
-                <figure class="figure">
-                    <img src="./images/elements/ural.jpg" alt="Урал" class="figure__img">
-                    <figcaption class="figure__caption">
-                        <p class="figure__text">Урал</p>
-                        <button type="button" class="figure__like"></button>
-                    </figcaption>
-                </figure>
-                <figure class="figure">
-                    <img src="./images/elements/baikal.jpg" alt="Байкал" class="figure__img">
-                    <figcaption class="figure__caption">
-                        <p class="figure__text">Байкал</p>
-                        <button type="button" class="figure__like"></button>
-                    </figcaption>
-                </figure>
-                <figure class="figure">
-                    <img src="./images/elements/kamchatka.jpg" alt="Камчатка" class="figure__img">
-                    <figcaption class="figure__caption">
-                        <p class="figure__text">Камчатка</p>
-                        <button type="button" class="figure__like"></button>
-                    </figcaption>
-                </figure>
-                <figure class="figure">
-                    <img src="./images/elements/gizgit.jpg" alt="Гижгит" class="figure__img">
-                    <figcaption class="figure__caption">
-                        <p class="figure__text">Гижгит</p>
-                        <button type="button" class="figure__like"></button>
-                    </figcaption>
-                </figure>
-                <figure class="figure">
-                    <img src="./images/elements/kavkaz.jpg" alt="Кавказ" class="figure__img">
-                    <figcaption class="figure__caption">
-                        <p class="figure__text">Кавказ</p>
-                        <button type="button" class="figure__like"></button>
-                    </figcaption>
-                </figure>
-                <figure class="figure">
-                    <img src="./images/elements/sevastopol.jpg" alt="Севастополь" class="figure__img">
-                    <figcaption class="figure__caption">
-                        <p class="figure__text">Севастополь</p>
-                        <button type="button" class="figure__like"></button>
-                    </figcaption>
-                </figure>
+                <template id="figure-template">
+                    <figure class="figure">
+                        <button type="button" class="figure__trash figure__trash_active"><img src="./images/Trash.png" alt="корзина"></button>
+                        <img class="figure__img">
+                        <figcaption class="figure__caption">
+                            <p class="figure__text"></p>
+                            <button type="button" class="figure__like"></button>
+                        </figcaption>
+                    </figure>
+                </template>
             </section>
         </main>
         <footer class="footer">
             <p class="footer__copyright">© 2020 Mesto Russia</p>
         </footer>
     </div>
-    <div class="popup">
+    <div class="popup" id="edit-profile">
         <div class="popup__container">
             <button class="popup__close" type = "button"></button>
             <h2 class="popup__title">Редактировать профиль</h2> 
             <form action="#" name="edit-form" class="popup__form">
-                <input type="text" name="name" placeholder="Ваше имя" value="" required class="popup__user-name">
-                <input type="text" name="name" placeholder="О себе" value="" required class="popup__user-occupation">
+                <input type="text" name="name" placeholder="Ваше имя" value="" required class="popup__input-first">
+                <input type="text" name="name" placeholder="О себе" value="" required class="popup__input-second">
                 <button class="popup__save">Сохранить</button>
             </form>   
+        </div>
+    </div>
+    <div class="popup" id="add-figure-popup">
+        <div class="popup__container">
+            <button class="popup__close" type = "button"></button>
+            <h2 class="popup__title" >Новое место</h2> 
+            <form action="#" name="add-figure-form" class="popup__form">
+                <input type="text" name="name" placeholder="Название" value="" required class="popup__input-first">
+                <input type="text" name="name" placeholder="Ссылка на картинку" value="" required class="popup__input-second">
+                <button class="popup__save">Сохранить</button>
+            </form>   
+        </div>
+    </div>
+
+  
+
+    <div class="popup-img">
+        <div class="popup-img__container">
+            <button class="popup-img__close" type = "button"></button> 
+            <figure class="figure-img">
+                <img class="figure-img__image">
+                <figcaption class="figure-img__caption"></figcaption>
+            </figure>
         </div>
     </div>
     <script src="./script/index.js"></script>

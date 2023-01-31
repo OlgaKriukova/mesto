@@ -1,4 +1,4 @@
-.edd-button {
+.add-button {
   margin-left: auto;
   margin-top: 35px;
   padding: 0;
@@ -13,12 +13,12 @@
   cursor: pointer;
 }
 
-.edd-button:hover {
+.add-button:hover {
   opacity: 0.6;
 }
 
 @media (max-width: 700px) {
-  .edd-button {
+  .add-button {
     margin-left: 0;
     width: 100%;
     background-image: url(../../images/plus-small.png);

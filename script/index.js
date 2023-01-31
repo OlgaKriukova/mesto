@@ -60,7 +60,7 @@ function clickHandlerTrash (evt) {
   evt.target.closest('.figure').remove();
 }
 
-function ActiveLikeHandler (evt) {
+function activeLikeHandler (evt) {
   evt.target.classList.toggle('figure__like_active');
 }
 
@@ -73,7 +73,7 @@ function addCard(cardName, cardLink) {
   cardImage.src = cardLink;
   cardImage.addEventListener('click', openImgPopupHandler);
 
-  cardElement.querySelector('.figure__like').addEventListener('click', ActiveLikeHandler);
+  cardElement.querySelector('.figure__like').addEventListener('click', activeLikeHandler);
 
   cardElement.querySelector('.figure__trash').addEventListener('click', clickHandlerTrash);
 
@@ -86,7 +86,7 @@ function fillCardsContainer (arr) {
   });
 }
 
-function popupCloseHandler (evt) {
+function closeHandlerPopup (evt) {
     evt.target.closest('.popup').classList.remove('popup_opened');
 }
 
@@ -94,7 +94,7 @@ function submitHandlerProfilePopupForm (evt) {
   evt.preventDefault();
   profileTitle.textContent = profilePopupUserName.value;
   profileSubtitle.textContent = profilePopupUserOccupation.value;
-  popupCloseHandler (evt);
+  closeHandlerPopup (evt);
 }
 
 profileEditButton.addEventListener('click', function () {
@@ -103,7 +103,7 @@ profileEditButton.addEventListener('click', function () {
   profilePopup.classList.add('popup_opened');
 });
 
-profilePopupCloseButton.addEventListener('click', popupCloseHandler);
+profilePopupCloseButton.addEventListener('click', closeHandlerPopup);
 
 profilePopupForm.addEventListener('submit', submitHandlerProfilePopupForm);
 
@@ -111,12 +111,12 @@ cardAddButton.addEventListener('click', function () {
       cardPopup.classList.add('popup_opened');
 });
 
-cardPopupCloseButton.addEventListener('click', popupCloseHandler);
+cardPopupCloseButton.addEventListener('click', closeHandlerPopup);
 
 cardPopupForm.addEventListener('submit', function(evt) {
   evt.preventDefault();
   addCard(cardPopupName.value, cardPopupUrl.value);
-  popupCloseHandler(evt);
+  closeHandlerPopup(evt);
   cardPopupName.value = '';
   cardPopupUrl.value = '';
 });

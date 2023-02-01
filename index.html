@@ -25,8 +25,8 @@
             <section class="elements" aria-label="фото">
                 <template id="figure-template">
                     <figure class="figure">
-                        <button type="button" class="figure__trash figure__trash_active"><img src="./images/Trash.png" alt="корзина"></button>
-                        <img src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg" class="figure__img" aria-label="место">
+                        <button type="button" class="figure__trash"><img src="./images/Trash.png" alt="корзина"></button>
+                        <img src="#" class="figure__img" alt="место">
                         <figcaption class="figure__caption">
                             <p class="figure__text"></p>
                             <button type="button" class="figure__like"></button>
@@ -40,7 +40,7 @@
         </footer>
     </div>
     <div class="popup" id="edit-profile">
-        <div class="popup__container">
+        <div class="popup__container popup__container_type_input">
             <button class="popup__close" type = "button"></button>
             <h2 class="popup__title">Редактировать профиль</h2> 
             <form action="#" name="edit-form" class="popup__form">
@@ -51,7 +51,7 @@
         </div>
     </div>
     <div class="popup" id="add-figure-popup">
-        <div class="popup__container">
+        <div class="popup__container popup__container_type_input">
             <button class="popup__close" type = "button"></button>
             <h2 class="popup__title" >Новое место</h2> 
             <form action="#" name="add-figure-form" class="popup__form">
@@ -61,12 +61,9 @@
             </form>   
         </div>
     </div>
-
-  
-
-    <div class="popup-img">
-        <div class="popup-img__container">
-            <button class="popup-img__close" type = "button"></button> 
+    <div class="popup" id="img-popup">
+        <div class="popup__container">
+            <button class="popup__close" type = "button"></button> 
             <figure class="figure-img">
                 <img src="#" class="figure-img__image" alt="место">
                 <figcaption class="figure-img__caption"></figcaption>

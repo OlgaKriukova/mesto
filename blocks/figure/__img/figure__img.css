@@ -1,4 +1,5 @@
 .figure__img {
+  display: inline-block;
   width: 282px;
   height: 282px;
   object-fit: cover;

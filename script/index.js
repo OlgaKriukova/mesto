@@ -118,16 +118,16 @@ const activeLikeHandler = (evt) => {
   evt.target.classList.toggle('figure__like_active');
 }
 
-const clickProfileEditButtonHandler = (evt) => {
+const clickProfileEditButtonHandler = () => {
   profilePopupUserName.value = profileTitle.textContent;
   profilePopupUserOccupation.value = profileSubtitle.textContent;
   clearValidation(profilePopupForm, validationParams.inputErrorClass, validationParams.errorClass, validationParams.inactiveButtonClass);
   openPopup(profilePopup);
 }
 
-const clickCardAddButtonHandler = function (evt) {
+const clickCardAddButtonHandler = function () {
   cardPopupForm.reset();
-  clearValidation(cardPopupForm);
+  clearValidation(cardPopupForm, validationParams.inputErrorClass, validationParams.errorClass, validationParams.inactiveButtonClass);
   openPopup(cardPopup);
 };
 

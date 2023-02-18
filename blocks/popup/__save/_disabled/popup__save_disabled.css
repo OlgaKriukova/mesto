@@ -6,7 +6,7 @@
 }
 
 .popup__save_disabled:not(:disabled):hover {
-  background-color: rgba(0 0 0 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 @media (max-width: 621px) {

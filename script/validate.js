@@ -84,3 +84,5 @@ const clearValidation = (form, inputErrorClass, errorClass, inactiveButtonClass)
   });
   toggleButtonState(formElement.inputList, formElement.buttonElement, inactiveButtonClass);
 }
+
+export {enableValidation, getFormValidity, clearValidation};

@@ -85,6 +85,7 @@ const clickProfileEditButtonHandler = () => {
 }
 
 const clickCardAddButtonHandler = function () {
+  cardPopup.popupForm.reset();
   cardPopup.popupForm.dispatchEvent(event);
   openPopup(cardPopup);
 };
@@ -94,7 +95,6 @@ const submitProfilePopupFormHandler = (evt) =>  {
     profileTitle.textContent = profilePopupUserName.value;
     profileSubtitle.textContent = profilePopupUserOccupation.value;
     closePopup (profilePopup);
-    profilePopup.popupForm.reset();
   }
 }
 
@@ -102,7 +102,6 @@ const submitCardPopupFormHandler = (evt) => {
   if (evt.target.isValid) {
     cardsContainer.prepend(createCard({name: cardPopupName.value, link: cardPopupUrl.value}));
     closePopup(cardPopup);
-    cardPopup.popupForm.reset();
   }
 }
 

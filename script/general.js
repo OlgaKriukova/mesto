@@ -12,11 +12,6 @@ export function openPopup(popup) {
   popup.classList.add('popup_opened');
   document.openedPopup = popup;
   document.addEventListener('keydown', keydownDocumentHandler);
-  
-  if (popup?.popupForm) {
-    const event = new Event('open');
-    popup.popupForm.dispatchEvent(event);
-  }
 }
 
 export function closePopup(popup) {

@@ -8,6 +8,6 @@
   bottom: 0;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s linear 0s, opacity 1s;
+  transition: visibility 1s, opacity 1s;
   z-index: 3;
 }

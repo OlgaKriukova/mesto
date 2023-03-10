@@ -17,7 +17,8 @@ export class Card {
   }
 
   _clickTrashHandler() { 
-    this._cardElement.closest('.figure').remove();
+    this._cardElement.remove();
+    this._cardElement = null;
   }
 
   _activeLikeHandler () {

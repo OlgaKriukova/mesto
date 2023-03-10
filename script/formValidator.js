@@ -60,7 +60,7 @@ export class FormValidator {
       });
     }
 
-    _openFormHandler() {
+    _clearValidation() {
       this._inputList.forEach((inputElement) => {
         this._hideInputError(inputElement);
       });
@@ -83,7 +83,7 @@ export class FormValidator {
         });
 
         this._formElement.addEventListener('open', () => {
-          this._openFormHandler();
+          this._clearValidation();
         });
         
         this._setEventListeners();        

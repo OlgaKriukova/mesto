@@ -25,6 +25,8 @@ cardPopup.popupForm = cardPopupForm;
 const closeButtons = document.querySelectorAll('.popup__close');
 const popups = document.querySelectorAll('.popup');
 
+const event = new Event('open');
+
 const validationParams = {
   formSelector: '.popup__form',
   inputSelector: '.popup__input',
@@ -78,10 +80,12 @@ function fillCardsContainer (arr) {
 const clickProfileEditButtonHandler = () => {
   profilePopupUserName.value = profileTitle.textContent;
   profilePopupUserOccupation.value = profileSubtitle.textContent;
+  profilePopup.popupForm.dispatchEvent(event);
   openPopup(profilePopup);
 }
 
 const clickCardAddButtonHandler = function () {
+  cardPopup.popupForm.dispatchEvent(event);
   openPopup(cardPopup);
 };
 
@@ -90,6 +94,7 @@ const submitProfilePopupFormHandler = (evt) =>  {
     profileTitle.textContent = profilePopupUserName.value;
     profileSubtitle.textContent = profilePopupUserOccupation.value;
     closePopup (profilePopup);
+    profilePopup.popupForm.reset();
   }
 }
 
@@ -97,6 +102,7 @@ const submitCardPopupFormHandler = (evt) => {
   if (evt.target.isValid) {
     cardsContainer.prepend(createCard({name: cardPopupName.value, link: cardPopupUrl.value}));
     closePopup(cardPopup);
+    cardPopup.popupForm.reset();
   }
 }
 

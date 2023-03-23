@@ -11,6 +11,12 @@ const profileEditButton = document.querySelector(selectors.profileEditButtonSele
 const cardAddButton = document.querySelector(selectors.cardAddButton);
 const validatedFormList = Array.from(document.querySelectorAll(validationParams.formSelector));
 
+function createCard(item) {
+  const card = new Card(item, selectors.cardTemplateSelector, selectors, imgPopup.open);
+  const cardElement = card.getCardElement();
+  return cardElement;
+}
+
 // Создание объектов
 const imgPopup = new PopupWithImage(selectors.imgPopupSelector, selectors);
 imgPopup.setEventListeners();
@@ -18,9 +24,7 @@ imgPopup.setEventListeners();
 const section = new Section({
   items: initialCards,
   renderer: (item) => {
-    const card = new Card(item, selectors.cardTemplateSelector, selectors, imgPopup.open);
-    const cardElement = card.getCardElement();
-    section.addItem(cardElement, false);
+    section.addItem(createCard(item), false);
   }
 }, selectors.sectionSelector);
 
@@ -33,9 +37,7 @@ const profilePopup = new PopupWithForm(selectors.profilePopupSelector, selectors
 profilePopup.setEventListeners();
 
 const cardPopup = new PopupWithForm(selectors.cardPopupSelector, selectors, (inputValues) => {
-  const card = new Card(inputValues, selectors.cardTemplateSelector, selectors, imgPopup.open);
-  const cardElement = card.getCardElement();
-  section.addItem(cardElement, true);
+  section.addItem(createCard(inputValues), true);
   cardPopup.close();
 });
 cardPopup.setEventListeners();

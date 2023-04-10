@@ -14,7 +14,7 @@
         <main class="main">
             <section class="profile" aria-label="инфо">
                 <button class="edit-avatar-button">
-                    <img src="" alt="аватарка" class="profile__avatar">
+                    <img src="<%=require('./images/avatar')%>" alt="аватарка" class="profile__avatar">
                     <div class="overlay">
                         <img src="<%=require('./images/pencil-big.png')%>" alt="карандаш">
                     </div>
@@ -140,14 +140,14 @@
                     <input
                         class="popup__input"
                         name="avatar"
-                        id="popup-input-url"
+                        id="popup-input-url-avatar"
                         type="url"
                         placeholder="Ссылка на картинку" 
                         value="" 
                         required 
                         tabindex="2"
                         title="в поле «Ссылка на картинку» должен быть URL">
-                    <span class="popup__input-error popup-input-url-error">Вы пропустили это поле.</span>
+                    <span class="popup__input-error popup-input-url-avatar-error">Вы пропустили это поле.</span>
                 </div>
                 <button class="popup__save">Сохранить</button>
             </form>   

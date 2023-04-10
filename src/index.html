@@ -13,11 +13,16 @@
         </header> 
         <main class="main">
             <section class="profile" aria-label="инфо">
-                <img src="<%=require('./images/avatar.jpg')%>" alt="аватарка" class="profile__avatar">
+                <button class="edit-avatar-button">
+                    <img src="" alt="аватарка" class="profile__avatar">
+                    <div class="overlay">
+                        <img src="<%=require('./images/pencil-big.png')%>" alt="карандаш">
+                    </div>
+                </button>
                 <div class="profile__info">
-                    <h1 class="profile__title">Жак-Ив Кусто</h1>
+                    <h1 class="profile__title"></h1>
                         <button type="button" class="profile__edit-button"></button>
-                    <p class="profile__subtitle">Исследователь океана</p>
+                    <p class="profile__subtitle"></p>
                 </div>
                 <button type="button" class="add-button"></button>
             </section>
@@ -28,7 +33,10 @@
                         <img src="#" class="figure__img" alt="место">
                         <figcaption class="figure__caption">
                             <p class="figure__text"></p>
-                            <button type="button" class="figure__like"></button>
+                            <div class="counter-like">
+                                <button type="button" class="figure__like"></button>
+                                <p class="figure__counter">111</p>
+                            </div>
                         </figcaption>
                     </figure>
                 </template>
@@ -42,7 +50,7 @@
         <div class="popup__container popup__container_type_input">
             <button class="popup__close" type = "button"></button>
             <h2 class="popup__title">Редактировать профиль</h2> 
-            <form action="#" name="edit-form" class="popup__form" tabindex="0" novalidate>
+            <form action="#" name="edit-form" class="popup__form popup__form-validated" tabindex="0" novalidate>
                 <div class="popup__form-item">
                     <input
                         class="popup__input popup__input_type_first"
@@ -61,8 +69,8 @@
                 <div class="popup__form-item">
                     <input
                         class="popup__input "
-                        name="occupation"
-                        id="popup-input-occupation"
+                        name="about"
+                        id="popup-input-about"
                         type="text"
                         placeholder="О себе"
                         value=""
@@ -71,7 +79,7 @@
                         minlength="2"
                         maxlength="200"
                         title="Длина поля должна быть 2 и более сиволов и менее или равно 200.">
-                    <span class="popup__input-error popup-input-occupation-error ">Вы пропустили это поле.</span>
+                    <span class="popup__input-error popup-input-about-error ">Вы пропустили это поле.</span>
                 </div>
                 <button class="popup__save">Сохранить</button>
             </form>   
@@ -81,7 +89,7 @@
         <div class="popup__container popup__container_type_input">
             <button class="popup__close" type = "button"></button>
             <h2 class="popup__title" >Новое место</h2> 
-            <form action="#" name="add-figure-form" class="popup__form" tabindex="0" novalidate>
+            <form action="#" name="add-figure-form" class="popup__form popup__form-validated" tabindex="0" novalidate>
                 <div class="popup__form-item">
                     <input
                         class="popup__input popup__input_type_first "
@@ -101,6 +109,37 @@
                     <input
                         class="popup__input"
                         name="link"
+                        id="popup-input-url"
+                        type="url"
+                        placeholder="Ссылка на картинку" 
+                        value="" 
+                        required 
+                        tabindex="2"
+                        title="в поле «Ссылка на картинку» должен быть URL">
+                    <span class="popup__input-error popup-input-url-error">Вы пропустили это поле.</span>
+                </div>
+                <button class="popup__save">Сохранить</button>
+            </form>   
+        </div>
+    </div>
+    <div class="popup" id="comfirm-del-card">
+        <div class="popup__container popup__container_type_input">
+            <button class="popup__close" type = "button"></button>
+            <h2 class="popup__title">Вы уверены?</h2> 
+            <form action="#" name="edit-form" class="popup__form" tabindex="0" novalidate>
+                <button class="popup__save" type = "submit">Да</button>
+            </form>   
+        </div>
+    </div>
+    <div class="popup" id="edit-avatar">
+        <div class="popup__container popup__container_type_input">
+            <button class="popup__close" type = "button"></button>
+            <h2 class="popup__title">Обновить аватар</h2> 
+            <form action="#" name="update-avatar-form" class="popup__form popup__form-validated" tabindex="0" novalidate>
+                <div class="popup__form-item">
+                    <input
+                        class="popup__input"
+                        name="avatar"
                         id="popup-input-url"
                         type="url"
                         placeholder="Ссылка на картинку" 

@@ -14,14 +14,16 @@ export default class Popup {
     };
 
     open() {
+        console.log('popup open begin');
         this._popup.classList.add('popup_opened');
         document.addEventListener('keydown', this._handleEscClose);
+        console.log('popup open end');
     };
 
     close() {
         this._popup.classList.remove('popup_opened');
         document.removeEventListener('keydown', this._handleEscClose);
-    }  
+    }
 
     setEventListeners() {
         this._closeButton.addEventListener('click', () => this.close());

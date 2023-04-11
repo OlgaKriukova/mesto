@@ -89,25 +89,19 @@ const imgPopup = new PopupWithImage(selectors.imgPopupSelector, selectors);
 imgPopup.setEventListeners();
 
 const cardPopup = new PopupWithForm(selectors.cardPopupSelector, selectors, function (inputValues) {
-  this.wait();
-  api.addCard(inputValues)
+  return api.addCard(inputValues)
   .then((result) => {
     console.log('api.addCard - then - '+result);
     section.addItem(createCard(result), true);
   })
   .catch((err) => {
     console.log('api.addCard - catch - '+err);
-  })
-  .finally(() => {
-    console.log('api.setUserInfo - finally');
-    this.close();
   });
 });
 cardPopup.setEventListeners();
 
 const profilePopup = new PopupWithForm(selectors.profilePopupSelector, selectors, function (inputValues) {
-  this.wait();
-  api.setUserInfo(inputValues)
+  return api.setUserInfo(inputValues)
     .then ((result) => {
       console.log('api.setUserInfo - then - '+result);
       userInfo.setUserInfo(result);
@@ -115,27 +109,18 @@ const profilePopup = new PopupWithForm(selectors.profilePopupSelector, selectors
     })
     .catch((err) => {
       console.log('api.setUserInfo - catch - '+err);
-    })
-    .finally(() => {
-      console.log('api.setUserInfo - finally');
-      this.close();
     });
 });
 profilePopup.setEventListeners();
 
 const avatarPopup = new PopupWithForm(selectors.avatarPopupSelector, selectors, function (inputValues) {
-  this.wait();
-  api.setUserAvatar(inputValues)
+  return api.setUserAvatar(inputValues)
     .then ((result) => {
       console.log('api.setUserAvatar - then - '+result);
       userInfo.setAvatar(result);
     })
     .catch((err) => {
       console.log('api.setUserAvatar - catch - '+err);
-    })
-    .finally(() => {
-      console.log('api.setUserInfo - finally');
-      this.close();
     });
 });
 avatarPopup.setEventListeners();
